@@ -163,12 +163,12 @@
 
 <h1 id="_1">因数分解技巧</h1>
 <p>数论题目中包含一些对因数的数量、素性等问题的考察。本文总结因数分解的一些技巧，以便利在数论题中进行复杂度优化。</p>
-<h2 id="_2">因子数量结论</h2>
+<h4 id="_2">因子数量结论</h4>
 <p>结论：<code>int32</code> 的所有因子个数至多约 <span class="arithmatex">\(1500\)</span> 个，平均因子个数约 <span class="arithmatex">\(20\)</span> 个，所有因子的平均因子个数约 <span class="arithmatex">\(10\)</span> 个。</p>
 <p>这个结论可用于对 <span class="arithmatex">\(10^9\)</span> 以内的数的因子进行二维 DP 。</p>
-<h2 id="_3">使用容斥统计互质数</h2>
+<h4 id="_3">使用容斥统计互质数</h4>
 <p>统计给定区间 <span class="arithmatex">\([l,r]\)</span> 中与 <span class="arithmatex">\(x\)</span> 互质的数的数量，可以对 <span class="arithmatex">\(x\)</span> 的质因数进行容斥。由于 <code>int32</code> 至多拥有 <span class="arithmatex">\(9\)</span> 个质因子，只需要 <span class="arithmatex">\(2^9\)</span> 次查询+容斥即可完成。</p>
-<h2 id="_4">质数分布最大距离</h2>
+<h4 id="_4">质数分布最大距离</h4>
 <p>在 <code>int32</code> 以内，质数分布的最大距离为 <span class="arithmatex">\(335\)</span> 。这意味着大约每 <span class="arithmatex">\(400\)</span> 个数就一定会出现至少一个质数。</p>
 <h2 id="_5">例题</h2>
 <h4 id="cf2233f-shortest-gcd-paths"><a href="https://codeforces.com/contest/2233/problem/F">CF2233F - Shortest GCD Paths</a></h4>
@@ -187,11 +187,15 @@
 <div class="arithmatex">\[w(u, v) = \gcd(u, v)\]</div>
 <p>问 <span class="arithmatex">\([l,r]\)</span> 内所有点到 <span class="arithmatex">\(n\)</span> 的最短路长度之和。</p>
 <h5 id="_7">题解</h5>
-<p>假设当前查询的点为 <span class="arithmatex">\(x\)</span> 。
-* 如果 <span class="arithmatex">\(\gcd(n,x)=1\)</span> ，那么对答案贡献为 <span class="arithmatex">\(1\)</span> 。这样的 <span class="arithmatex">\(x\)</span> 的数量可以用 <span class="arithmatex">\(n\)</span> 的质因数进行容斥得出。由于 <span class="arithmatex">\(n\)</span> 最多包含 <span class="arithmatex">\(8\)</span> 个质因数，这样只要做至多 <span class="arithmatex">\(2^8\)</span> 次查询就可以筛出 <span class="arithmatex">\([l,r]\)</span> 内与 <span class="arithmatex">\(n\)</span> 互质的数的个数。
-* 否则，假设最大的不大于 <span class="arithmatex">\(n\)</span> 的质数是 <span class="arithmatex">\(p\)</span> 。
-    * 若 <span class="arithmatex">\(x&lt;p\)</span> ，那么可以走 <span class="arithmatex">\(x\to p\to n\)</span> ，对答案贡献为 <span class="arithmatex">\(2\)</span> 。
-    * 否则，我们可以估计 <span class="arithmatex">\(n-p\)</span> 大约在 <span class="arithmatex">\(200\)</span> 以内，此时可以使用Floyd算法求每个点的最短路，不会超时。对答案贡献就是对应的最短路和。</p>
+<p>假设当前查询的点为 <span class="arithmatex">\(x\)</span> 。</p>
+<ul>
+<li>如果 <span class="arithmatex">\(\gcd(n,x)=1\)</span> ，那么对答案贡献为 <span class="arithmatex">\(1\)</span> 。这样的 <span class="arithmatex">\(x\)</span> 的数量可以用 <span class="arithmatex">\(n\)</span> 的质因数进行容斥得出。由于 <span class="arithmatex">\(n\)</span> 最多包含 <span class="arithmatex">\(8\)</span> 个质因数，这样只要做至多 <span class="arithmatex">\(2^8\)</span> 次查询就可以筛出 <span class="arithmatex">\([l,r]\)</span> 内与 <span class="arithmatex">\(n\)</span> 互质的数的个数。</li>
+<li>否则，假设最大的不大于 <span class="arithmatex">\(n\)</span> 的质数是 <span class="arithmatex">\(p\)</span> 。<ul>
+<li>若 <span class="arithmatex">\(x&lt;p\)</span> ，那么可以走 <span class="arithmatex">\(x\to p\to n\)</span> ，对答案贡献为 <span class="arithmatex">\(2\)</span> 。</li>
+<li>否则，我们可以估计 <span class="arithmatex">\(n-p\)</span> 大约在 <span class="arithmatex">\(200\)</span> 以内，此时可以使用Floyd算法求每个点的最短路，不会超时。对答案贡献就是对应的最短路和。</li>
+</ul>
+</li>
+</ul>
 <p>分别筛出三类点并且分别统计总贡献即可。</p>
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
