@@ -1,13 +1,13 @@
-# 欧拉函数
+# Euler 函数
 $\varphi(x)$ 定义为 $y\le x$ 且 $\gcd(x,y)=1$ 的 $y$ 数量。
 ## 基本性质
 
-* Euler 分部求和
+#### Euler 分部求和
 
 $$\sum_{d|n}\varphi(d)=n
 $$
 
-* 引理
+#### 引理
 
 $$\gcd(a,b)=\sum_{x|a,x|b}\varphi(x)$$
 ## 例题

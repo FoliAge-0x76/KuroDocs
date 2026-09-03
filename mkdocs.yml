@@ -2,11 +2,13 @@ site_name: KuroDocs
 nav:
   - 首页: index.md
   - 个人作品集: 
-    - Noita 模组: noita/mymods.md
-    - 杀戮尖塔2模组: misc/sts2mods.md
+    - Steam 创意工坊项目: misc/workshop.md
+    - 画集: misc/illustrations.md
   - 算法学习笔记: 
-    - Möbius 反演: algo/mobius.md
-    - Euler 函数: algo/euler_phi.md
+    - 数论:
+      - 因数分解技巧: algo/factors.md
+      - Möbius 反演: algo/mobius.md
+      - Euler 函数: algo/euler_phi.md
     - 2-SAT: algo/2-sat.md
     - SAM : algo/sam.md
 theme:
