@@ -8,32 +8,45 @@ plugins:
       docs_path: docs/
 nav:
   - 首页: index.md
-  - 个人作品集: 
+  - 个人作品集:
+    - 个人作品集简介: misc/index.md
     - Steam 创意工坊项目: misc/workshop.md
     - 画集: misc/illustrations.md
-  - 算法学习笔记: 
+  - 算法学习笔记:
+    - 算法笔记简介: algo/index.md
     - 数论:
       - 因数分解技巧: algo/factors.md
       - Möbius 反演: algo/mobius.md
       - Euler 函数: algo/euler_phi.md
-    - 2-SAT: algo/2-sat.md
-    - SAM : algo/sam.md
+    - 杂项:
+      - 2-SAT: algo/2-sat.md
+      - SAM: algo/sam.md
 theme:
-  name: moonstone
-  locale: zh
-  custom_dir: ./custom_theme/
-extra:
-  header_links:
-    - name: 奥五报
-      url: http://www.journalawb.xyz/
-    - name: TEST
-      url: '#'
-    - name: 链接
-      url: '#'
+  name: material
+  language: zh
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/brightness-7
+        name: 切换到深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/brightness-4
+        name: 切换到浅色模式
+extra_javascript:
+  - javascripts/mathjax.js
 extra_css:
   - css/fonts.css
-  - css/toc.css
-  - css/layout.css
   - css/navigation.css
 markdown_extensions:
   - pymdownx.highlight:
