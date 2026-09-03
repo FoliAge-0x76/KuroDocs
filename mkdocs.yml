@@ -1,0 +1,26 @@
+site_name: KuroDocs
+nav:
+  - 首页: index.md
+  - 个人作品集: 
+    - Noita 模组: noita/mymods.md
+    - 杀戮尖塔2模组: misc/sts2mods.md
+  - 算法学习笔记: 
+    - Möbius 反演: algo/mobius.md
+    - Euler 函数: algo/euler_phi.md
+    - 2-SAT: algo/2-sat.md
+    - SAM : algo/sam.md
+theme:
+  name: moonstone
+  locale: zh
+  custom_dir: ./custom_theme/
+extra_css:
+  - css/fonts.css
+  - css/toc.css
+  - css/layout.css
+  - css/navigation.css
+markdown_extensions:
+  - pymdownx.highlight:
+      guess_lang: false
+  - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true

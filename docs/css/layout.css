@@ -1,0 +1,21 @@
+#main {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+#main h1,
+#main h2,
+#main h3,
+#main h4,
+#main h5,
+#main h6 {
+  padding-bottom: 8px;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+@media (max-width: 767px) {
+  #main {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}

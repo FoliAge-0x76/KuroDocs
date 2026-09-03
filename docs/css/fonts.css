@@ -1,0 +1,26 @@
+body,
+button,
+input,
+textarea,
+select {
+  font-family: "Trebuchet MS", "Microsoft YaHei", "微软雅黑", sans-serif;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Trebuchet MS", "Microsoft YaHei", "微软雅黑", sans-serif;
+  font-weight: 400;
+}
+
+pre,
+code,
+kbd,
+samp {
+  font-family: Consolas;
+  font-weight: 400;
+}
