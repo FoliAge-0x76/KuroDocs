@@ -9,7 +9,9 @@ KuroDocs（暗黑文档）是由我个人搭建和维护的公开在线文档，
 KuroDocs 基于 [MkDocs](https://github.com/mkdocs/mkdocs) 部署。你可以访问 KuroDocs 的 [GitHub 页面](https://github.com/FoliAge-0x76/KuroDocs)。
 
 ## 我是谁
-
-我是我。你可以叫我 KuroLeaf 或者 WhiteLeaf，也可以叫我黑叶或者白叶。或者我还有个名字叫葉樹。
+![我的头像](images/WhiteLeaf.png){: style="float: right; margin-left: 1rem; width: 200px;"}我是我。你可以叫我 KuroLeaf 或者 WhiteLeaf，也可以叫我黑叶或者白叶。或者我还有个名字叫葉樹。
 
 既然你都来到这里了，在这个站随便逛逛就能知道我的成分了。快去看看吧！
+
+* Bilibili: [KuroLeaf](https://space.bilibili.com/39645804)
+* Wiki.gg: [KuroLeaf](https://noita.wiki.gg/zh/wiki/User:KuroLeaf)
