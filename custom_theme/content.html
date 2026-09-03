@@ -1,0 +1,12 @@
+{% if page and not page.meta.no_breadcrumb %}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    {% for doc in page.ancestors %}
+    <li class="breadcrumb-item"><a href="{{ doc.url | url }}">{{ doc.title }}</a></li>
+    {% endfor %}
+    <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
+  </ol>
+</nav>
+{% endif %}
+
+{{ page.content }}

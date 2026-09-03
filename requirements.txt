@@ -1,2 +1,3 @@
 mkdocs
 mkdocs-moonstone
+mkdocs-git-committers-plugin

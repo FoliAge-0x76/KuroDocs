@@ -1,0 +1,38 @@
+<footer class="col-md-12">
+  {% block footer_metadata %}
+  <ul class="metadata page-metadata" data-bi-name="page info" lang="zh-CN" dir="ltr">
+    <li class="last-updated-holder">
+      <span class="last-updated-text">最后更新：</span>
+      <time datetime="{% if last_commit %}{{ last_commit.commit.committer.date.isoformat() }}{% endif %}">{% if last_commit %}{{ last_commit.commit.committer.date.strftime('%Y-%m-%d') }}{% endif %}</time>
+    </li>
+    <li class="contributors-holder">
+      <span class="contributors-text">贡献者：</span>
+      <ul class="contributors" data-bi-name="contributors">
+        {% for user in committers %}
+        <li><a href="{{ user.repos }}" title="{{ user.name }}"><img src="{{ user.avatar }}?size=32" alt="{{ user.name }}"></a></li>
+        {% endfor %}
+      </ul>
+    </li>
+  </ul>
+  {% endblock %}
+  <nav class="container">
+    <div class="row">
+      <div class="col-12">
+        <ul class="nav flex-row ml-md-auto d-none d-md-flex pull-right">
+          <li class="nav-item"><a class="nav-link" href="{{ 'license/' | url }}">License</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://github.com/FoliAge-0x76/KuroDocs">GitHub Home</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+      </div>
+      <div class="col-6">
+        <ul class="nav flex-row ml-md-auto d-none d-md-flex pull-right">
+          <li><a class="nav-link footer-image-link footer-image-link-github" href="https://github.com/FoliAge-0x76" aria-label="GitHub">
+              <i class="fa fa-github"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</footer>
