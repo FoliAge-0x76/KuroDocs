@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      // Hack for scrolling window when linking to anchor tag with fixed nav header
+      var shiftWindow = function() { scrollBy(0, -75) };
+      window.addEventListener("hashchange", shiftWindow);
+      function load() { if (window.location.hash) shiftWindow(); }
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    
+    <title>2-SAT - KuroDocs</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github.min.css" rel="stylesheet">
+  <link href="../../css/font-awesome.min.css" rel="stylesheet">
+  <link href="../../css/code-styles.css" rel="stylesheet">
+  <link href="../../css/mega-menu.css" rel="stylesheet">
+  <link href="../../css/code-tabs.css" rel="stylesheet">
+  <link href="../../css/admonition.css" rel="stylesheet">
+  <link href="../../css/base.css" rel="stylesheet">
+  
+    <link href="../../css/fonts.css" rel="stylesheet">
+  
+    <link href="../../css/toc.css" rel="stylesheet">
+  
+    <link href="../../css/layout.css" rel="stylesheet">
+  
+    <link href="../../css/navigation.css" rel="stylesheet">
+  
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="../../fonts.js"></script>
+   
+  <script src="../../javascripts/mathjax.js"></script>
+
+  </head>
+  
+  <body class="" data-spy="scroll" data-target="#toc">
+    <nav id="mainnav" class="navbar navbar-default navbar-expand-md navbar-light sticky-top" role="navigation">
+    <a class="navbar-brand" href="../..">
+      KuroDocs
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainnav-navbar-collapse" aria-controls="mainnav-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="mainnav-navbar-collapse" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav mr-auto mx-auto">
+        <li class="main-item">
+          <a class="nav-link" href="#">Link 1</a>
+        </li>
+        <li class="main-item">
+          <a class="nav-link" href="#">Link 2</a>
+        </li>
+        <li class="main-item">
+          <a class="nav-link" href="#">Link 3</a>
+        </li>
+      </ul>
+      
+      <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+	    <i class="fa fa-search"></i> Search
+          </a>
+        </li>
+      </ul>
+    </div>
+</nav>
+    <div id="content"class="container-fluid">
+      
+    <div class="row">
+      <div id="sidebar-nav" class="sidebar col-md-3"><nav id="sidenav" class="navbar navbar-default navbar-expand-md navbar-dark" role="navigation">
+  <a class="navbar-brand d-block d-md-none d-xl-none" href="#"><i class="fa fa-home fa-fw"></i> Table of Contents</a>
+  <button class="navbar-toggler ml-auto hidden-sm-up float-xs-right" type="button" data-toggle="collapse" data-target="#sidebar-navbar-collapse" aria-controls="sidebar-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="sidebar-navbar-collapse">
+    <!-- Main navigation -->
+    <ul class="nav navbar-nav flex-column">
+      <li >
+        <a class="nav-link" href="../..">首页</a>
+      </li>
+      <li class="toplevel nav-item" data-toggle="collapse" data-target="#个人作品集">
+        <!--<a href="#" class="nav-link">个人作品集 <b class="caret"></b></a>-->
+        <span class="section-title">个人作品集</span>
+        <ul id="个人作品集" class="collapse">
+          
+<li>
+    <a href="../../noita/mymods.md" class="">Noita 模组</a>
+</li>
+          
+<li>
+    <a href="../../misc/sts2mods.md" class="">杀戮尖塔2模组</a>
+</li>
+        </ul>
+      </li>
+      <li class="toplevel nav-item active" data-toggle="collapse" data-target="#算法学习笔记">
+        <!--<a href="#" class="nav-link">算法学习笔记 <b class="caret"></b></a>-->
+        <span class="section-title">算法学习笔记</span>
+        <ul id="算法学习笔记" class="collapse">
+          
+<li>
+    <a href="../mobius/" class="">Möbius 反演</a>
+</li>
+          
+<li>
+    <a href="../euler_phi/" class="">Euler 函数</a>
+</li>
+          
+<li>
+    <a href="./" class=" active">2-SAT</a>
+</li>
+          
+<li>
+    <a href="../sam/" class="">SAM</a>
+</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+</div>
+      <div id="main" class="col" role="main">
+
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    
+    
+    <li class="breadcrumb-item">算法学习笔记</li>
+    
+    
+    <li class="breadcrumb-item active" aria-current="page">2-SAT</li>
+  </ol>
+</nav>
+
+
+<h1 id="2-sat">2-SAT</h1>
+<h2 id="_1">关键问题</h2>
+<p>给定 <span class="arithmatex">\(n\)</span> 组布尔方程，形如 <span class="arithmatex">\(a\lor b\)</span>，求是否有解。若有解，输出方案。</p>
+<ol>
+<li>抽象。将每个布尔值 <span class="arithmatex">\(a\)</span> 拆分成 <span class="arithmatex">\(a\)</span> 与 <span class="arithmatex">\(\lnot a\)</span> 两个状态。</li>
+<li>对条件进行建图。例如 <span class="arithmatex">\(a\lor b\)</span> ，我们建立 <span class="arithmatex">\(\lnot a\to b\)</span> 和 <span class="arithmatex">\(\lnot b\to a\)</span> 。</li>
+<li>使用 Tarjan 算法找 SCC。若任意 <span class="arithmatex">\(a\)</span> 与 <span class="arithmatex">\(\lnot a\)</span> 位于同一 SCC，意味着无解，否则有解。</li>
+<li>输出方案。若 <span class="arithmatex">\(a\)</span> 所在 SCC 编号在 <span class="arithmatex">\(\lnot a\)</span> 之前时，取 <span class="arithmatex">\(a\)</span> ，否则取 <span class="arithmatex">\(\lnot a\)</span> 。</li>
+</ol>
+<h2 id="_2">例题</h2>
+<h4 id="_3">题面</h4>
+<p>给定 <span class="arithmatex">\(n\)</span> 对字符串 <span class="arithmatex">\(l_i,r_i\)</span> ，要求在每对字符串选择一个组成集合 <span class="arithmatex">\(S\)</span>，且在此集合中，任意两个字符串不构成前缀关系。问是否有解。若有解输出答案。</p>
+<h4 id="_4">思路</h4>
+<p>首先构建 Trie，然后寻找布尔关系。</p>
+<p>对同一个节点 <span class="arithmatex">\(u\)</span> 上代表的 <span class="arithmatex">\(k\)</span> 个字符串，我们使用链式约束，保证只会选中其中一个。对每个串，设：</p>
+<ul>
+<li><span class="arithmatex">\(s_i\)</span> 代表第 <span class="arithmatex">\(i\)</span> 个字符串是否被选中，设其对应的另一个串为 <span class="arithmatex">\(t_i\)</span> 。</li>
+<li><span class="arithmatex">\(c_i\)</span> 代表 <span class="arithmatex">\(s_i\)</span> 的前缀和。</li>
+</ul>
+<p>那么有（若 <span class="arithmatex">\(s_i=t_i\)</span> 需要特判）：</p>
+<ul>
+<li><span class="arithmatex">\(s_i\lor t_i\)</span></li>
+<li><span class="arithmatex">\(t_i \lor c_{u,i}\)</span></li>
+<li><span class="arithmatex">\(t_i \lor \lnot c_{u,i-1}\)</span></li>
+<li><span class="arithmatex">\(\lnot c_{u,i-1} \lor c_{u,i}\)</span></li>
+</ul>
+<p>若选择了一个 Trie 节点 <span class="arithmatex">\(u\)</span> 上的某个串，它的子树中的所有节点不能选择。于是我们对每个节点构造布尔变量：</p>
+<ul>
+<li><span class="arithmatex">\(x_u\)</span> ，若 <span class="arithmatex">\(u\)</span> 的子树包含已选节点，<span class="arithmatex">\(x_u\)</span> 取真。</li>
+</ul>
+<p>于是对 <span class="arithmatex">\(u\)</span> 任意儿子节点 <span class="arithmatex">\(v\)</span> 有以下规则：</p>
+<ul>
+<li><span class="arithmatex">\(\lnot c_{u,k}\lor\lnot x_v\)</span></li>
+<li><span class="arithmatex">\(\lnot c_{u,k}\lor x_u\)</span></li>
+<li><span class="arithmatex">\(\lnot x_v\lor x_u\)</span></li>
+</ul>
+<p>整理以上约束，我们需要建立的布尔节点：</p>
+<ul>
+<li>每个串对的 <span class="arithmatex">\(s_i\)</span> 共 <span class="arithmatex">\(n\)</span> 个</li>
+<li>每个节点的 <span class="arithmatex">\(c_{u,i}\)</span> 共 <span class="arithmatex">\(2n\)</span> 个</li>
+<li>每个节点的儿子 <span class="arithmatex">\(x_u\)</span> 共 <span class="arithmatex">\(|S|\)</span> 个</li>
+</ul>
+<p>对以上约束建图，进行 2-SAT 求解即可得到答案。</p>
+<h4 id="_5">实现</h4>
+<div class="highlight"><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">TwoSAT</span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">head</span><span class="p">[</span><span class="n">N</span><span class="p">],</span><span class="n">to</span><span class="p">[</span><span class="n">N</span><span class="p">],</span><span class="n">nxt</span><span class="p">[</span><span class="n">N</span><span class="p">];</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">dfn</span><span class="p">[</span><span class="n">N</span><span class="p">],</span><span class="n">low</span><span class="p">[</span><span class="n">N</span><span class="p">];</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">dfncnt</span><span class="p">,</span><span class="n">st</span><span class="p">[</span><span class="n">N</span><span class="p">],</span><span class="n">pushed</span><span class="p">[</span><span class="n">N</span><span class="p">],</span><span class="n">top</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">scc</span><span class="p">[</span><span class="n">N</span><span class="p">],</span><span class="n">sz</span><span class="p">[</span><span class="n">N</span><span class="p">],</span><span class="n">sc</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">siz</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// 多测默认，单测用1版本</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">init</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">flag</span><span class="o">=</span><span class="mi">0</span><span class="p">){</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">flag</span><span class="p">){</span>
+<span class="w">            </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">N</span><span class="p">;</span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="n">head</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">            </span><span class="k">return</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">cnt</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">sc</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">top</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">dfncnt</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="p">(</span><span class="n">siz</span><span class="o">&lt;&lt;</span><span class="mi">1</span><span class="o">|</span><span class="mi">1</span><span class="p">);</span><span class="o">++</span><span class="n">i</span><span class="p">){</span>
+<span class="w">            </span><span class="n">head</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">            </span><span class="n">dfn</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="w">            </span><span class="n">low</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="w">            </span><span class="n">scc</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="w">            </span><span class="n">sz</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">siz</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">build</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">u</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="p">){</span><span class="n">nxt</span><span class="p">[</span><span class="n">cnt</span><span class="p">]</span><span class="o">=</span><span class="n">head</span><span class="p">[</span><span class="n">u</span><span class="p">];</span><span class="n">head</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="o">=</span><span class="n">cnt</span><span class="p">;</span><span class="n">to</span><span class="p">[</span><span class="n">cnt</span><span class="o">++</span><span class="p">]</span><span class="o">=</span><span class="n">v</span><span class="p">;}</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">addClause</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">l</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">notl</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">notr</span><span class="p">){</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">ll</span><span class="o">=</span><span class="p">(</span><span class="n">l</span><span class="o">&lt;&lt;</span><span class="mi">1</span><span class="p">)</span><span class="o">|</span><span class="n">notl</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">rr</span><span class="o">=</span><span class="p">(</span><span class="n">r</span><span class="o">&lt;&lt;</span><span class="mi">1</span><span class="p">)</span><span class="o">|</span><span class="n">notr</span><span class="p">;</span>
+<span class="w">        </span><span class="n">build</span><span class="p">(</span><span class="n">ll</span><span class="o">^</span><span class="mi">1</span><span class="p">,</span><span class="n">rr</span><span class="p">);</span>
+<span class="w">        </span><span class="n">build</span><span class="p">(</span><span class="n">rr</span><span class="o">^</span><span class="mi">1</span><span class="p">,</span><span class="n">ll</span><span class="p">);</span>
+<span class="w">        </span><span class="n">siz</span><span class="o">=</span><span class="n">max</span><span class="p">(</span><span class="n">siz</span><span class="p">,</span><span class="n">max</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">r</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">Tarjan</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">u</span><span class="p">){</span>
+<span class="w">        </span><span class="n">low</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="o">=</span><span class="n">dfn</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="o">=++</span><span class="n">dfncnt</span><span class="p">;</span>
+<span class="w">        </span><span class="n">st</span><span class="p">[</span><span class="o">++</span><span class="n">top</span><span class="p">]</span><span class="o">=</span><span class="n">u</span><span class="p">;</span>
+<span class="w">        </span><span class="n">pushed</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+<span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">p</span><span class="o">=</span><span class="n">head</span><span class="p">[</span><span class="n">u</span><span class="p">];</span><span class="o">~</span><span class="n">p</span><span class="p">;</span><span class="n">p</span><span class="o">=</span><span class="n">nxt</span><span class="p">[</span><span class="n">p</span><span class="p">]){</span>
+<span class="w">            </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span><span class="o">=</span><span class="n">to</span><span class="p">[</span><span class="n">p</span><span class="p">];</span>
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">dfn</span><span class="p">[</span><span class="n">v</span><span class="p">]){</span>
+<span class="w">                </span><span class="n">Tarjan</span><span class="p">(</span><span class="n">v</span><span class="p">);</span>
+<span class="w">                </span><span class="n">low</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="o">=</span><span class="n">min</span><span class="p">(</span><span class="n">low</span><span class="p">[</span><span class="n">u</span><span class="p">],</span><span class="n">low</span><span class="p">[</span><span class="n">v</span><span class="p">]);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">pushed</span><span class="p">[</span><span class="n">v</span><span class="p">]){</span>
+<span class="w">                </span><span class="n">low</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="o">=</span><span class="n">min</span><span class="p">(</span><span class="n">low</span><span class="p">[</span><span class="n">u</span><span class="p">],</span><span class="n">dfn</span><span class="p">[</span><span class="n">v</span><span class="p">]);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">dfn</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="o">==</span><span class="n">low</span><span class="p">[</span><span class="n">u</span><span class="p">]){</span>
+<span class="w">            </span><span class="o">++</span><span class="n">sc</span><span class="p">;</span>
+<span class="w">            </span><span class="k">do</span><span class="p">{</span>
+<span class="w">                </span><span class="n">scc</span><span class="p">[</span><span class="n">st</span><span class="p">[</span><span class="n">top</span><span class="p">]]</span><span class="o">=</span><span class="n">sc</span><span class="p">;</span>
+<span class="w">                </span><span class="n">sz</span><span class="p">[</span><span class="n">sc</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
+<span class="w">                </span><span class="n">pushed</span><span class="p">[</span><span class="n">st</span><span class="p">[</span><span class="n">top</span><span class="p">]]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span><span class="k">while</span><span class="p">(</span><span class="n">st</span><span class="p">[</span><span class="n">top</span><span class="o">--</span><span class="p">]</span><span class="o">!=</span><span class="n">u</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="c1">// 返回方案，若为空则无可行方案，下标从0开始</span>
+<span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="nf">Solve</span><span class="p">(){</span>
+<span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="p">(</span><span class="n">siz</span><span class="o">&lt;&lt;</span><span class="mi">1</span><span class="o">|</span><span class="mi">1</span><span class="p">);</span><span class="o">++</span><span class="n">i</span><span class="p">){</span>
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">dfn</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="n">Tarjan</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">string</span><span class="w"> </span><span class="n">res</span><span class="p">,</span><span class="n">empty</span><span class="p">;</span>
+<span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">siz</span><span class="p">;</span><span class="o">++</span><span class="n">i</span><span class="p">){</span>
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">scc</span><span class="p">[</span><span class="n">i</span><span class="o">&lt;&lt;</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="n">scc</span><span class="p">[</span><span class="n">i</span><span class="o">&lt;&lt;</span><span class="mi">1</span><span class="o">|</span><span class="mi">1</span><span class="p">]){</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">empty</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="k">else</span><span class="w"> </span><span class="n">res</span><span class="p">.</span><span class="n">push_back</span><span class="p">((</span><span class="n">scc</span><span class="p">[</span><span class="n">i</span><span class="o">&lt;&lt;</span><span class="mi">1</span><span class="p">]</span><span class="o">&lt;</span><span class="n">scc</span><span class="p">[</span><span class="n">i</span><span class="o">&lt;&lt;</span><span class="mi">1</span><span class="o">|</span><span class="mi">1</span><span class="p">])</span><span class="o">?</span><span class="sc">'1'</span><span class="o">:</span><span class="sc">'0'</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">res</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span><span class="n">sat</span><span class="p">;</span>
+</code></pre></div>
+
+<ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
+  <li class="last-updated-holder displayDate loading">
+    <span class="last-updated-text">Last updated:</span>
+    <time role="presentation" datetime="2018-10-25T00:00:00.000Z" data-article-date-source="ms.date"></time>
+  </li>
+<!--
+  <li class="readingTime">
+    2 minutes to read
+  </li>
+-->
+  <li class="contributors-holder">
+    <span class="contributors-text">Contributors</span>
+    <ul class="contributors" data-bi-name="contributors"></ul>
+  </li>
+</ul>
+</div>
+      <div id="sidebar-toc" class="sidebar col-md-2">
+	<nav id="toc" data-toggle="toc" class="sticky-top sticky-offset"></nav>
+      </div>
+    </div>
+    </div><footer class="col-md-12">
+  <nav class="container">
+    <div class="row">
+      <div class="col-12">
+	<ul class="nav flex-row ml-md-auto d-none d-md-flex pull-right">
+	  <li class="nav-item"><a class="nav-link" href="#">License</a></li>
+	  <li class="nav-item"><a class="nav-link" href="#">GitHub Home</a></li>
+	</ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+      </div>
+      <div class="col-6">
+	<ul class="nav flex-row ml-md-auto d-none d-md-flex pull-right">
+	  <li><a class="nav-link footer-image-link footer-image-link-facebook" href="#">
+	      <i class="fa fa-facebook"></i></a></li>
+	  <li><a class="nav-link footer-image-link footer-image-link-twitter" href="#">
+	      <i class="fa fa-twitter"></i></a></li>
+	  <li><a class="nav-link footer-image-link footer-image-link-linkedin" href="#">
+	      <i class="fa fa-linkedin"></i></a></li>
+	  <li><a class="nav-link footer-image-link footer-image-link-youtube" href="#">
+	      <i class="fa fa-youtube"></i></a></li>
+	</ul>
+      </div>
+  </nav>
+</footer>
+  <script>
+    var base_url = "../..",
+        shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" defer></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js" defer></script>
+  <script src="../../js/base.js" defer></script>
+  <script src="../../javascripts/toc.js" defer></script>
+  <script>
+    window.addEventListener("load", function () {
+      if (window.hljs) hljs.highlightAll();
+    });
+  </script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" data-toc-skip>Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="h4 modal-title">Keyboard Shortcuts</p>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    
+  </body>
+</html>

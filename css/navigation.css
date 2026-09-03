@@ -1,0 +1,18 @@
+#sidebar-nav .toplevel .section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#sidebar-nav .toplevel .section-title::after {
+  content: "▸";
+  margin-left: 8px;
+  color: #bdbdbd;
+  font-size: 1rem;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+#sidebar-nav .toplevel.active .section-title::after {
+  transform: rotate(90deg);
+}
