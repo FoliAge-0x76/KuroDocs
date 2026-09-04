@@ -52,6 +52,10 @@
 }
 
 @media screen and (min-width: 76.25em) {
+  .md-sidebar--primary {
+    width: 9rem;
+  }
+
   .md-nav--primary .md-nav__item--nested > .md-nav__toggle:not(:checked) ~ .md-nav {
     display: none !important;
   }
