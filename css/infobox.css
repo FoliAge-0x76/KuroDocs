@@ -45,6 +45,8 @@
   max-height: 18rem;
   object-fit: contain;
   margin: 0 auto;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
 }
 
 .infobox-image figcaption {
