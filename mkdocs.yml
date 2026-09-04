@@ -2,6 +2,10 @@ site_name: KuroDocs
 repo_url: https://github.com/FoliAge-0x76/KuroDocs
 plugins:
   - search
+  - macros:
+      module_name: main
+      on_error_fail: true
+      on_undefined: strict
   - git-committers:
       repository: FoliAge-0x76/KuroDocs
       branch: master
@@ -60,6 +64,7 @@ extra_javascript:
 extra_css:
   - css/fonts.css
   - css/navigation.css
+  - css/infobox.css
 markdown_extensions:
   - pymdownx.highlight:
       guess_lang: false

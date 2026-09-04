@@ -1,0 +1,31 @@
+<table class="infobox">
+  <caption>{{ title }}</caption>
+  {% if image or image_2 %}
+  <tr>
+    <td colspan="2" class="infobox-image">
+      <div class="infobox-images">
+        {% if image %}
+        <figure>
+          <img src="{{ image }}" alt="{{ image_alt or title }}" style="width: {{ image_scale }};">
+          {% if image_caption %}<figcaption>{{ image_caption }}</figcaption>{% endif %}
+        </figure>
+        {% endif %}
+        {% if image_2 %}
+        <figure>
+          <img src="{{ image_2 }}" alt="{{ image_alt_2 or title }}" style="width: {{ image_scale_2 }};">
+          {% if image_caption_2 %}<figcaption>{{ image_caption_2 }}</figcaption>{% endif %}
+        </figure>
+        {% endif %}
+      </div>
+    </td>
+  </tr>
+  {% endif %}
+  {% for name, value in fields %}
+  {% if name is not none and value is not none %}
+  <tr>
+    <th scope="row">{{ name }}</th>
+    <td>{{ value | safe }}</td>
+  </tr>
+  {% endif %}
+  {% endfor %}
+</table>
