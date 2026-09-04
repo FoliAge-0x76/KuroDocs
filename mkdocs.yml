@@ -32,6 +32,10 @@ nav:
     - Noita 简介: noita/index.md
   - VIPRPG:
     - VIPRPG 简介: viprpg/index.md
+    - 魔术师协会:
+      - 简介: viprpg/magicians/magicians.md
+      - 校仓: viprpg/magicians/azekura.md
+      - 水门: viprpg/magicians/minaton.md
   - 苍星:
     - 苍星简介: lapiz/index.md
   - 弹笔:
