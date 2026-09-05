@@ -10,13 +10,15 @@
 	field_1_name="日文名",
 	field_1_value="ミナトン",
 	field_2_name="别名",
-	field_2_value="米娜顿、入母屋",
+	field_2_value="米娜顿、入母屋、伊莉茉娅",
 	field_3_name="性别",
 	field_3_value="女",
 	field_4_name="职业",
 	field_4_value="空间魔导士",
 	field_5_name="所属势力",
-	field_5_value="魔术师协会"
+	field_5_value="魔术师协会",
+	field_6_name="初登场作品",
+	field_6_value='2016年7月30日<br><a href="https://www.bilibili.com/video/BV131je6tEos">「見習い魔導士があらわれた！」</a>'
 ) }}
 
 魔导士，根据作品不同，可能会修习时间魔法或者空间魔法。
@@ -27,9 +29,11 @@
 
 ## 人物关系
 
-与同届的[校仓](../azekura.md)是好友。水门视校仓为竞争对手，两人经常小打小闹。
+与同届的[校仓](../azekura)是好友。水门视校仓为竞争对手，两人经常小打小闹。
 
-是[艾什莉](../ashley.md)的前辈。
+是[艾什莉](../ashley)的前辈。
+
+是[切妻](../kirizuma.md)的学生。
 
 ## 姓名考据
-入母屋（イリモヤ）一名来源于「入母屋造(いりもやづくり)」，一种日式木构建筑工艺。
+入母屋/伊莉茉娅（イリモヤ）一名来源于「入母屋造(いりもやづくり)」，一种日式木构建筑工艺。

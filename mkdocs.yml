@@ -23,6 +23,8 @@ nav:
       - 因数分解技巧: algo/factors.md
       - Möbius 反演: algo/mobius.md
       - Euler 函数: algo/euler_phi.md
+    - 多项式:
+      - 卷积算法: algo/fft.md
     - 杂项:
       - 2-SAT: algo/2-sat.md
       - SAM: algo/sam.md
@@ -32,10 +34,27 @@ nav:
     - Noita 简介: noita/index.md
   - VIPRPG:
     - VIPRPG 简介: viprpg/index.md
+    - 王国军·勇者军:
+      - 简介: viprpg/kingdom/kingdom.md
+    - 魔王军:
+      - 简介
+    - 安迪德奈伊军:
+      - 简介
+    - 玉露军:
+      - 简介
+    - 布莱恩潘曼军:
+      - 简介
+    - 冥界:
+      - 简介
+    - 深都:
+      - 简介
     - 魔术师协会:
       - 简介: viprpg/magicians/magicians.md
       - 校仓: viprpg/magicians/azekura.md
       - 水门: viprpg/magicians/minaton.md
+      - 艾什莉: viprpg/magicians/ashley.md
+    - 如果诸神:
+      - 简介
   - 苍星:
     - 苍星简介: lapiz/index.md
   - 弹笔:
@@ -73,6 +92,7 @@ markdown_extensions:
   - pymdownx.highlight:
       guess_lang: false
   - pymdownx.superfences
+  - pymdownx.details
   - pymdownx.arithmatex:
       generic: true
   - attr_list

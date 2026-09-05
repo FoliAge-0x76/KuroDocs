@@ -1,6 +1,9 @@
 # Möbius 反演
 莫反是由一个函数的容易计算的约数和倍数形式来反向统计该函数本身的算法。它的本质是容斥。
-#### 约数形式
+## Möbius 函数
+$$[\gcd(x,y)=1]=\sum_{d|\gcd(x,y)}\mu(d)$$
+## Möbius 反演
+### 约数形式
 若 $g(x)$ 是原函数 $f(x)$ 的约数形式
 
 \[
@@ -13,7 +16,7 @@ g(n)=\sum_{d\mid n} f(d)
 f(n)=\sum_{d\mid n} \mu(d)\,g\!\left(\frac{n}{d}\right)
 \]
 
-#### 倍数形式
+### 倍数形式
 若 $F(x)$ 是原函数 $f(x)$ 的倍数形式
 
 \[
@@ -27,7 +30,7 @@ f(n)=\sum_{n\mid d} \mu\!\left(\frac{d}{n}\right) F(d)
 \]
 
 ## 例题
-#### [[POI 2007] ZAP-Queries](https://www.luogu.com.cn/problem/P3455)
+### [[POI 2007] ZAP-Queries](https://www.luogu.com.cn/problem/P3455)
 
 题意：统计 $\gcd(a,b)=k$ 的数对 $(a,b)$
 
@@ -58,7 +61,7 @@ int solve(int n,int m,int k){
 	return res;
 }
 ```
-#### [P2257 YY的GCD](https://www.luogu.com.cn/problem/P2257)
+### [P2257 YY的GCD](https://www.luogu.com.cn/problem/P2257)
 
 题意：统计 $\gcd(a,b)$ 为质数的数对 $(a,b)$
 
