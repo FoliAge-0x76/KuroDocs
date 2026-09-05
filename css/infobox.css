@@ -94,3 +94,12 @@
   background-color: var(--md-code-bg-color);
   color: var(--md-default-fg-color);
 }
+
+.md-typeset details pre,
+.md-typeset details code {
+  font-size: var(--md-code-font-size);
+}
+
+.md-typeset details {
+  font-size: inherit;
+}
