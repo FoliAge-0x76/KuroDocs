@@ -11,6 +11,10 @@
   font-size: inherit;
 }
 
+.infobox-clear {
+  clear: both;
+}
+
 .infobox caption {
   padding: 0.65rem 0.8rem;
   background-color: var(--md-code-bg-color);

@@ -34,8 +34,10 @@ nav:
     - Noita 简介: noita/index.md
   - VIPRPG:
     - VIPRPG 简介: viprpg/index.md
+    - 概要:
+      - 黑话: viprpg/terms.md
     - 王国军·勇者军:
-      - 简介: viprpg/kingdom/kingdom.md
+      - 简介: viprpg/kingdom.md
     - 魔王军:
       - 简介
     - 安迪德奈伊军:
@@ -49,10 +51,12 @@ nav:
     - 深都:
       - 简介
     - 魔术师协会:
-      - 简介: viprpg/magicians/magicians.md
+      - 简介: viprpg/magicians.md
       - 校仓: viprpg/magicians/azekura.md
       - 水门: viprpg/magicians/minaton.md
       - 艾什莉: viprpg/magicians/ashley.md
+      - 切妻: viprpg/magicians/kirizuma.md
+      - 其他角色: viprpg/magicians/others.md
     - 如果诸神:
       - 简介
   - 苍星:
