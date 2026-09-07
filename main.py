@@ -9,6 +9,7 @@ TEMPLATE_ENV = Environment(
     autoescape=True,
 )
 INFOBOX_TEMPLATE = TEMPLATE_ENV.get_template("infobox.html")
+CHARACTER_GRID_TEMPLATE = TEMPLATE_ENV.get_template("character-grid.html")
 
 
 def normalize_image_scale(scale):
@@ -27,6 +28,10 @@ def normalize_image_scale(scale):
 
 
 def define_env(env):
+    @env.macro
+    def character_grid(*members):
+        return Markup(CHARACTER_GRID_TEMPLATE.render(members=members))
+
     @env.macro
     def infobox(
         title,

@@ -1,0 +1,15 @@
+<div class="character-grid">
+  {% for image, description, link in members %}
+  {% if link %}
+  <a class="character-card" href="{{ link }}">
+    <img src="{{ image }}" alt="{{ description }}">
+    <span>{{ description }}</span>
+  </a>
+  {% else %}
+  <div class="character-card character-card--unlinked">
+    <img src="{{ image }}" alt="{{ description }}">
+    <span>{{ description }}</span>
+  </div>
+  {% endif %}
+  {% endfor %}
+</div>

@@ -36,8 +36,9 @@ nav:
     - VIPRPG 简介: viprpg/index.md
     - 概要:
       - 黑话: viprpg/terms.md
-    - 王国军·勇者军:
+    - 王国军:
       - 简介: viprpg/kingdom.md
+      - 亚历克斯: viprpg/kingdom/alex.md
     - 魔王军:
       - 简介
     - 安迪德奈伊军:

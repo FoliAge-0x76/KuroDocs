@@ -10,7 +10,7 @@
 	field_1_name="日文名",
 	field_1_value="ミナトン",
 	field_2_name="别名",
-	field_2_value="米娜顿、入母屋、伊莉茉娅",
+	field_2_value="米娜顿、凑、入母屋、伊莉茉娅",
 	field_3_name="性别",
 	field_3_value="女",
 	field_4_name="职业",
