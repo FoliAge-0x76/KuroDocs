@@ -15,6 +15,58 @@
   clear: both;
 }
 
+.character-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: stretch;
+  margin: 1.25rem 0;
+}
+
+.character-card {
+  display: flex;
+  flex: 0 0 5.5rem;
+  flex-direction: column;
+  align-items: center;
+  min-width: 5.5rem;
+  max-width: 5.5rem;
+  padding: 0.5rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  background-color: var(--md-code-bg-color);
+  color: var(--md-default-fg-color);
+  text-align: center;
+  text-decoration: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.character-card--unlinked {
+  color: #fff;
+}
+
+.character-card:hover,
+.character-card:focus-visible {
+  border-color: var(--md-accent-fg-color);
+  box-shadow: 0 0.15rem 0.5rem rgb(0 0 0 / 12%);
+  color: var(--md-default-fg-color);
+}
+
+.character-card img {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
+
+.character-card span {
+  display: block;
+  margin-top: 0.6rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
 .infobox caption {
   padding: 0.65rem 0.8rem;
   background-color: var(--md-code-bg-color);
