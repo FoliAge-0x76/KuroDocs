@@ -47,9 +47,31 @@ RTP XP/VX/MV 的角色一般不包含在其中，被视为其他大陆的居民�
 
 {{ character_grid(
 	("face/linux.png", "莉娜克斯", ""),
-    ("face/lenux.png", "蕾娜克斯", "")
+    ("face/lenux.png", "蕾娜克斯", ""),
+    ("face/lorex.png", "罗雷克斯", ""),
+    ("face/leox.png", "雷欧克斯", ""),
+    ("face/sophia.png", "索菲娅", ""),
+    ("face/lilix.png", "莉莉克斯", ""),
+    ("face/liezas.png", "最爱内裤丸", ""),
+    ("face/carolian.png", "卡萝莉恩", ""),
+    ("face/aresa.png", "艾蕾莎", ""),
+    ("face/marl.png", "玛尔", ""),
+    ("face/mili.png", "米莉", "")
 ) }}
 
 ### RTP 通用角色
 
-
+{{ character_grid(
+	("face/king.png", "国王", ""),
+    ("face/queen.png", "王后", ""),
+    ("face/prince.png", "王子", ""),
+    ("face/princess.png", "公主", ""),
+    ("face/soldier.png", "士兵", ""),
+    ("face/soldier_f.png", "女士兵", ""),
+    ("face/1-1.png", "一般1-1", ""),
+    ("face/1-2.png", "一般1-2", ""),
+    ("face/1-3.png", "一般1-3", ""),
+    ("face/1-4.png", "一般1-4", ""),
+    ("face/1-5.png", "一般1-5", ""),
+    ("face/1-6.png", "一般1-6", "")
+) }}
