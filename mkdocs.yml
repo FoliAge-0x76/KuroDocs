@@ -30,6 +30,7 @@ nav:
       - SAM: algo/sam.md
   - 音游:
     - 音游部分简介: mug/index.md
+    - 舞萌 DX 自制谱教程: mug/maimai_charting.md
   - 魔法编程:
     - Noita 简介: noita/index.md
   - VIPRPG:
@@ -60,6 +61,8 @@ nav:
       - 其他角色: viprpg/magicians/others.md
     - 如果诸神:
       - 简介
+    - 魔法具现化:
+      - 简介: viprpg/magic.md
   - 苍星:
     - 苍星简介: lapiz/index.md
   - 弹笔:
