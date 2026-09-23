@@ -11,7 +11,7 @@
 
 ## 创建谱面
 
-一张谱面至少需要包含音乐、封面和谱面文件。以 Majdata 为例，也就是需要三个文件：`track.mp3`、`bg.jpg/bg/png`，以及 `maidata.txt` 。如果你想加上视频背景，也可以加入 `pv.mp4` 。
+一张谱面至少需要包含音乐、封面和谱面文件。以 Majdata 为例，也就是需要三个文件：`track.mp3`、`bg.jpg/bg.png`，以及 `maidata.txt` 。如果你想加上视频背景，也可以加入 `pv.mp4` 。
 
 启动 MajEdit ，选择 `文件 - 新建` ，选中你准备好的 `track.mp3` 进行谱面初始化。
 
@@ -25,7 +25,11 @@
 
 Simai 是 Simulator of Maimai 的缩写，用于在各类制谱器中对舞萌 DX 的实际效果进行模拟。MajEdit 及其改版使用 Simai 进行制谱。
 
-我们基于几个例子讲解 Simai。这是 sølips 紫谱的 tap touch taptap touch 段（经典回顾）。
+我们基于几个例子讲解 Simai。
+
+### 基础 Note
+
+这是 sølips 紫谱的 tap touch taptap touch 段（经典回顾）。
 
 ```
 (199)
@@ -55,7 +59,9 @@ xwy # Wifi 星星（x 与 y 必须在对面）
 wVxy # 过 A 区折线星星（从 w 号键到 x 号键再到 y 号键，w 和 x 之间必须间隔 1 个键）
 ```
 
-接下来一段学习更多的语法。这是神威紫谱的尾杀：
+### 变种 Note
+
+这是神威紫谱的尾杀：
 
 ```
 {16}
@@ -77,3 +83,11 @@ wVxy # 过 A 区折线星星（从 w 号键到 x 号键再到 y 号键，w 和 x
 使用 起点+形状+中间点1+形状+中间点2+…+形状+终点 的格式，使用多段形状拼接出一条复杂的星星。比如 `3bxs7>1z5[4:11]` 。
 
 同时同头启动的星星使用星号来分割多条不同的星星，比如 `1-4[8:1]*-6[8:1]` 代表两条同时从 1 号键出发，分别到 4/6 号键的两条直线星星。这在上面的例子里没有提到。
+
+## 分享谱面
+
+你可以将谱面上传到 [Majdata Net](https://majdata.net/)，然后分享对应谱面的链接。你也可以在这里寻找其他人制作的谱面。
+
+## 游玩谱面
+
+你可以将谱面导入 [Majdata Play](https://docs.majdata.net/majdataplay/install) 或 [AstroDX](https://github.com/2394425147/astrodx) 进行游玩。具体的导入方法请看对应工具的文档。
