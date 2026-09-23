@@ -1240,6 +1240,56 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Simai 语言">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#note" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基础 Note
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#note_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        变种 Note
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        分享谱面
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        游玩谱面
+      
+    </span>
+  </a>
+  
 </li>
       
     </ul>
@@ -2799,6 +2849,56 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Simai 语言">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#note" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基础 Note
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#note_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        变种 Note
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        分享谱面
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        游玩谱面
+      
+    </span>
+  </a>
+  
 </li>
       
     </ul>
@@ -2831,14 +2931,16 @@
 <li>Visual Maimai，提供高度可视化的制谱器。</li>
 </ul>
 <h2 id="_2">创建谱面</h2>
-<p>一张谱面至少需要包含音乐、封面和谱面文件。以 Majdata 为例，也就是需要三个文件：<code>track.mp3</code>、<code>bg.jpg/bg/png</code>，以及 <code>maidata.txt</code> 。如果你想加上视频背景，也可以加入 <code>pv.mp4</code> 。</p>
+<p>一张谱面至少需要包含音乐、封面和谱面文件。以 Majdata 为例，也就是需要三个文件：<code>track.mp3</code>、<code>bg.jpg/bg.png</code>，以及 <code>maidata.txt</code> 。如果你想加上视频背景，也可以加入 <code>pv.mp4</code> 。</p>
 <p>启动 MajEdit ，选择 <code>文件 - 新建</code> ，选中你准备好的 <code>track.mp3</code> 进行谱面初始化。</p>
 <p>选择 <code>编辑 - 谱面信息</code> ，完善谱面信息内容。点 OK 保存。</p>
 <p>在 MajEdit 左侧可以选择当前谱面的难度。默认是 EASY，在写谱之前请确认谱面的难度。</p>
 <p>新谱面需要先确定 BPM 和偏移。BPM 的写法是在右侧谱面文件编辑器中以圆括号+数字的形式给出，例如 <code>(220)</code>。如果不知道曲子的具体 BPM，你可以先定一个大致的数，然后写一长串 4 分音，根据听感进行微调直到四分音能够完全对上拍子即可（也就是节拍器的原理）。</p>
 <h2 id="simai">Simai 语言</h2>
 <p>Simai 是 Simulator of Maimai 的缩写，用于在各类制谱器中对舞萌 DX 的实际效果进行模拟。MajEdit 及其改版使用 Simai 进行制谱。</p>
-<p>我们基于几个例子讲解 Simai。这是 sølips 紫谱的 tap touch taptap touch 段（经典回顾）。</p>
+<p>我们基于几个例子讲解 Simai。</p>
+<h3 id="note">基础 Note</h3>
+<p>这是 sølips 紫谱的 tap touch taptap touch 段（经典回顾）。</p>
 <div class="highlight"><pre><span></span><code>(199)
 {8}
 7v8[8:1],,E5/B5,,2v1[8:1],2,E5/B4,,
@@ -2859,7 +2961,8 @@ xzy xsy # 闪电星星（x 与 y 必须在对面）
 xwy # Wifi 星星（x 与 y 必须在对面）
 wVxy # 过 A 区折线星星（从 w 号键到 x 号键再到 y 号键，w 和 x 之间必须间隔 1 个键）
 </code></pre></div>
-<p>接下来一段学习更多的语法。这是神威紫谱的尾杀：</p>
+<h3 id="note_1">变种 Note</h3>
+<p>这是神威紫谱的尾杀：</p>
 <div class="highlight"><pre><span></span><code>{16}
 7bx,5,7,5,7,5,8,5,8,5,8,5,1,5,1,5,1,5,2,5,2,5,2,5,
 {32}
@@ -2874,6 +2977,10 @@ wVxy # 过 A 区折线星星（从 w 号键到 x 号键再到 y 号键，w 和 x
 <p>在星星的终点末尾追加 b 来代表绝赞星星，比如 <code>3-7b[8:1]</code>。</p>
 <p>使用 起点+形状+中间点1+形状+中间点2+…+形状+终点 的格式，使用多段形状拼接出一条复杂的星星。比如 <code>3bxs7&gt;1z5[4:11]</code> 。</p>
 <p>同时同头启动的星星使用星号来分割多条不同的星星，比如 <code>1-4[8:1]*-6[8:1]</code> 代表两条同时从 1 号键出发，分别到 4/6 号键的两条直线星星。这在上面的例子里没有提到。</p>
+<h2 id="_3">分享谱面</h2>
+<p>你可以将谱面上传到 <a href="https://majdata.net/">Majdata Net</a>，然后分享对应谱面的链接。你也可以在这里寻找其他人制作的谱面。</p>
+<h2 id="_4">游玩谱面</h2>
+<p>你可以将谱面导入 <a href="https://docs.majdata.net/majdataplay/install">Majdata Play</a> 或 <a href="https://github.com/2394425147/astrodx">AstroDX</a> 进行游玩。具体的导入方法请看对应工具的文档。</p>
 
 
 
