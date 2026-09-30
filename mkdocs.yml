@@ -30,7 +30,9 @@ nav:
       - SAM: algo/sam.md
   - 音游:
     - 音游部分简介: mug/index.md
-    - 舞萌 DX 自制谱教程: mug/maimai_charting.md
+    - 舞萌 DX:
+      - 舞萌 DX 自制谱教程: mug/maimai_charting.md
+      - Simai 语言: mug/maimai_simai.md
   - 魔法编程:
     - Noita 简介: noita/index.md
   - VIPRPG:
