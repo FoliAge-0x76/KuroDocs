@@ -11,7 +11,9 @@ plugins:
       branch: master
       docs_path: docs/
 nav:
-  - 首页: index.md
+  - 首页: 
+    - 首页: index.md
+
   - 个人作品集:
     - 个人作品集简介: misc/index.md
     - 奥五报: misc/awb.md
@@ -36,35 +38,8 @@ nav:
   - 魔法编程:
     - Noita 简介: noita/index.md
   - VIPRPG:
-    - VIPRPG 简介: viprpg/index.md
-    - 概要:
-      - 黑话: viprpg/terms.md
-    - 王国军:
-      - 简介: viprpg/kingdom.md
-      - 亚历克斯: viprpg/kingdom/alex.md
-    - 魔王军:
-      - 简介: viprpg/maou.md
-    - 安迪德奈伊军:
-      - 简介
-    - 玉露军:
-      - 简介
-    - 布莱恩潘曼军:
-      - 简介
-    - 冥界:
-      - 简介
-    - 深都:
-      - 简介
-    - 魔术师协会:
-      - 简介: viprpg/magicians.md
-      - 校仓: viprpg/magicians/azekura.md
-      - 水门: viprpg/magicians/minaton.md
-      - 艾什莉: viprpg/magicians/ashley.md
-      - 切妻: viprpg/magicians/kirizuma.md
-      - 其他角色: viprpg/magicians/others.md
-    - 如果诸神:
-      - 简介
-    - 魔法具现化:
-      - 简介: viprpg/magic.md
+    - 简介: viprpg/index.md
+    - 黑话: viprpg/terms.md
   - 苍星:
     - 苍星简介: lapiz/index.md
   - 弹笔:
