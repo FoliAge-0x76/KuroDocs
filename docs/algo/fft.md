@@ -111,3 +111,15 @@ $$f_k=\sum_{i\oplus j=k}g_i\cdot h_j$$
         return fa;
     }
     ```
+
+### 快速莫比乌斯变换 FMT
+
+FMT 其实就是指 FWT 的 AND/OR 部分。
+
+### 使用 FWT 解决 SOSDP 问题
+
+SOSDP 求子集和就是 FWT 在 OR 运算下的正变换。
+
+SOSDP 求超集和就是 FWT 在 AND 运算下的正变换（或 OR 的逆变换）。
+
+注意：若做统计问题，使用 `qPow(2,x)` 的情况下，模数应当使用 `MOD-1`。这由费马小定理可以证明。
