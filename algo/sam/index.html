@@ -1159,10 +1159,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sam_1" class="md-nav__link">
+  <a href="#parent" class="md-nav__link">
     <span class="md-ellipsis">
       
-        反串 SAM 构建后缀树
+        Parent 树
       
     </span>
   </a>
@@ -1799,10 +1799,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sam_1" class="md-nav__link">
+  <a href="#parent" class="md-nav__link">
     <span class="md-ellipsis">
       
-        反串 SAM 构建后缀树
+        Parent 树
       
     </span>
   </a>
@@ -1830,7 +1830,7 @@
 
 
 <h1 id="sam">SAM</h1>
-<p>SAM的本质是对一个串的所有后缀的AC自动机的压缩版本。从起点到任意一个终止状态可以构成原串的一个后缀，任意一个状态都代表原串的一个本质不同的子串。</p>
+<p>SAM 的本质是对一个串的所有后缀的 AC 自动机的压缩版本。从起点到任意一个终止状态可以构成原串的一个后缀，任意一个状态都代表原串的一类拥有相同 endpos 的子串，也就是 endpos 等价类。</p>
 <p>它的结构总是包含：</p>
 <ul>
 <li><code>last</code> ：指向代表整个串的状态的指针，增量从 <code>last</code> 开始构建。</li>
@@ -1843,7 +1843,7 @@
 </ul>
 <p>它可以解决的基础问题：</p>
 <ul>
-<li>求本质不同子串数量：</li>
+<li>求本质不同子串数量：累加每个 endpos 等价类（即状态）包含的子串总数量。</li>
 </ul>
 <div class="arithmatex">\[\sum_{v\in \text{SAM}} \text{len}(v)-\text{len}(\text{link}(v))\]</div>
 <ul>
@@ -1858,8 +1858,9 @@
 </li>
 <li>最小表示法：即在 <span class="arithmatex">\(SS\)</span> 的 SAM 上寻找字典序最小的长度为 <span class="arithmatex">\(|S|\)</span> 的路径。</li>
 </ul>
-<h2 id="sam_1">反串 SAM 构建后缀树</h2>
-<p>若在 SAM 上对 <code>link</code> 关系建图，我们就可以得到一个仅包含所有前缀的所有后缀的信息的树，即 parent 树。</p>
+<h2 id="parent">Parent 树</h2>
+<p>若在 SAM 上对 <code>link</code> 关系建图，每个节点以 <code>link</code> 为父亲，我们就可以得到一个仅包含所有前缀的所有后缀的信息的树，即 parent 树。</p>
+<p>沿着 <code>link</code> 关系向上累加每个状态的 <code>cnt</code>，我们可以得到每个状态代表的任意子串在原串中的出现次数（它们是相同的）。配合每个状态的子串总数量统计，我们可以得到所有子串在某个串 <span class="arithmatex">\(S\)</span> 中的出现次数。</p>
 <p>反串构建的 parent 树与正串的压缩后缀树拥有相同的结构。边自儿子指向父亲，代表 当前节点代表的后缀 的 所有前缀 中 最长且仍为原串后缀的。</p>
 
 
