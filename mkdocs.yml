@@ -16,9 +16,7 @@ nav:
 
   - 个人作品集:
     - 个人作品集简介: misc/index.md
-    - 奥五报: misc/awb.md
     - Steam 创意工坊项目: misc/workshop.md
-    - 画集: misc/illustrations.md
   - 算法学习笔记:
     - 算法笔记简介: algo/index.md
     - 数论:
